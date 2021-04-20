@@ -42,3 +42,16 @@ body {
     margin: 1em;
 }
 
+.bild {
+    height: 600px;
+}
+
+.content {
+    text-align: center;
+}
+
+.button {
+    width: 5rem;
+    height: 3rem;
+    background-color: rgb(165, 196, 134);
+}
