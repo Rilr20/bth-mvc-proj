@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #eee;
+}
+.main {
+    width: 85%;
+    min-height: 800px;
+    height: 100%;
+    background-color: #eee;
+    margin: auto;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 1em;
+}
+
+.footer {
+    background-color: #ccc;
+    height: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1em;
+}
+
+
+.nav {
+    background-color: #ccc;
+    height: 50px;
+    padding-top: 1em;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.nav ul li {
+    display: inline;
+}
+
+.nav ul li a, .nav ul li a:visited {
+    color: black;
+    margin: 1em;
+}
+
