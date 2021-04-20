@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloWorldController;
+use App\Http\Controllers\DiceController;
 // use App\Http\Controllers\MainController;
 /*
 |--------------------------------------------------------------------------
@@ -14,17 +15,28 @@ use App\Http\Controllers\HelloWorldController;
 |
 */
 
-Route::get('/', [HelloWorldController::class, 'hello']);
-
+// Route::get('/', [HelloWorldController::class, 'hello']);
+// Route::get('/', function () {
+//     return view('welcome'); //welcome är namnet på en vy
+// });
+// Route::get('/', [HelloWorldController::class, 'hello']);
+Route::get('/', function () {
+    return view('frontpage'); //welcome är namnet på en vy
+});
 Route::get('/greeting', function() {
     return "hej hej";
 });
 
+Route::get("/dice", [DiceController::class, 'dicepage']);
+// Route::post("/dice", array('as' => 'roll', 'uses' => 'DiceController@dicepage'));
+Route::post("/dice", 'App\Http\Controllers\DiceController@dicepage');
 
 // Added for mos example code
+// har ingen vy är bara echo
 Route::get('/hello-world', function () {
     echo "Hello World";
 });
+
 Route::get('/hello-world-view', function () {
     return view('message', [
         'message' => "Hello World from within a view"
