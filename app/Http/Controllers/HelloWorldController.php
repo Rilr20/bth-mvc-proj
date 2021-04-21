@@ -14,6 +14,7 @@ class HelloWorldController extends Controller
      */
     public function hello($message=null)
     {
+        //message är vy namn
         return view('message', [
             'message' => $message ?? "Hello World as default from within controller",
             'title' => "titeln"
