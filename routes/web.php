@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloWorldController;
 use App\Http\Controllers\DiceController;
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\YatzyController;
 // use App\Http\Controllers\MainController;
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,11 @@ Route::post("/dice", 'App\Http\Controllers\DiceController@dicepage');
 
 Route::get("/game", [GameController::class, 'index']);
 Route::post("/game", 'App\Http\Controllers\GameController@gamelogic');
+
+
+Route::get("/yatzy", [YatzyController::class, 'index']);
+Route::post("/yatzy", 'App\Http\Controllers\YatzyController@gameActions');
+
 
 // Added for mos example code
 // har ingen vy är bara echo
