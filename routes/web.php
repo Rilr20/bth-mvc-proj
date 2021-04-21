@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloWorldController;
 use App\Http\Controllers\DiceController;
+use App\Http\Controllers\GameController;
 // use App\Http\Controllers\MainController;
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,11 @@ use App\Http\Controllers\DiceController;
 // });
 // Route::get('/', [HelloWorldController::class, 'hello']);
 Route::get('/', function () {
-    return view('frontpage'); //welcome är namnet på en vy
+    Session::put('name', 'your2name');
+    // echo Session::get('name');
+    // $_SESSION["hi"] = "arg";
+    
+    return view('frontpage'); //frontpage är namnet på en vy
 });
 Route::get('/greeting', function() {
     return "hej hej";
@@ -30,6 +35,9 @@ Route::get('/greeting', function() {
 Route::get("/dice", [DiceController::class, 'dicepage']);
 // Route::post("/dice", array('as' => 'roll', 'uses' => 'DiceController@dicepage'));
 Route::post("/dice", 'App\Http\Controllers\DiceController@dicepage');
+
+Route::get("/game", [GameController::class, 'index']);
+Route::post("/game", 'App\Http\Controllers\GameController@gamelogic');
 
 // Added for mos example code
 // har ingen vy är bara echo

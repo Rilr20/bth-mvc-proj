@@ -17,8 +17,8 @@
             <li><a href="{{url('/')}}">Startsidan</a></li>
             <li><a href="{{url('/hello-world-view')}}">Hello World View</a></li>
             <li><a href="{{url('/dice')}}">Tärning</a></li>
-            <li><a href="{{url('/hello-world')}}">Game 21</a></li>
-            <li><a href="{{url('/hello-world')}}">Yatzy</a></li>
+            <li><a href="{{url('/game')}}">Game 21</a></li>
+            <li><a href="{{url('/yatzy')}}">Yatzy</a></li>
         </ul>
     </nav>
     <main class="main">
