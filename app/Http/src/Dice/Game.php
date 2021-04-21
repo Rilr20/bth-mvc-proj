@@ -160,7 +160,9 @@ class Game
         $string = "";
         $pWin = "Player Wins!";
         $pLoss = "Player Loses!";
-        $_SESSION["resultArray"] = $_SESSION["resultArray"] ?? [];
+        // $_SESSION["resultArray"] = $_SESSION["resultArray"] ?? [];
+        $array = Session::get("resultArray") ?? [];
+        Session::put("resultArray", $array);
         // if (!isset($_SESSION["resultArray"])) {
         //     $_SESSION["resultArray"] = [];
         // }
@@ -195,8 +197,10 @@ class Game
         // echo $currentDate->format('Y-m-d H:i:s');
         $string = $string . " " . $currentDate->format('Y-m-d H:i:s');
         $newResult[0] = $string;
-        $_SESSION["resultArray"] = array_merge($_SESSION["resultArray"], $newResult);
-        $_SESSION["running"] = "intermission";
+        // $_SESSION["resultArray"] = array_merge($_SESSION["resultArray"], $newResult);
+        Session::put("resultArray", array_merge(Session::get("resultArray"), $newResult));
+        // $_SESSION["running"] = "intermission";
+        Session::put("running", "intermission");
         // $body = renderView("layout/dice.php", $data);
         // sendResponse($body);
         return $data;
