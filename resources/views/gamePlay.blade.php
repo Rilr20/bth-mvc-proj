@@ -19,7 +19,7 @@
 
 </div>
 
-<form action="{{ url('/GameController') }}" method="post">
+<form action="{{ url('/game') }}" method="post">
     @csrf
     <button class="game-button" type="submit" name="gameAction" value="roll" />Roll</button>
     <input type="hidden" name="computer" value="{{ $computerSum }}">

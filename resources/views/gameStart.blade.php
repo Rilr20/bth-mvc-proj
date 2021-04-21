@@ -6,7 +6,7 @@
 <p> {{ $message }}</p>
 
 <p>Play with 1 or 2 dice?</p>
-<form action="{{ url('/GameController) }}" method="post">
+<form action="{{ url('/game') }}" method="post">
     @csrf
     <button class="game-button" name="options" type="submit" value="1">1 Die</button>
     <button class="game-button" name="options" type="submit" value="2">2 Dice</button>
