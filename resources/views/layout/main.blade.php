@@ -25,7 +25,6 @@
         @yield('content')
     </main>
     <footer class="footer">
-        <hr>
         <p>FooterText</p>
     </footer>
 </body>
