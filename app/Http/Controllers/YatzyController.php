@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Rilr\Yatzy\Yatzy;
 use Session;
-use SessionHandler;
 
 class YatzyController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $this->resetGame();
         $yatzy = new Yatzy();
         $data = $yatzy->startYatzy();
@@ -18,16 +18,18 @@ class YatzyController extends Controller
         return view("yatzy", $data);
     }
 
-    private function resetGame() {
+    private function resetGame()
+    {
         Session::forget("throws");
         Session::forget("playerScore");
     }
 
-    public function gameActions() {
+    public function gameActions()
+    {
         $yatzy = unserialize(Session::get("yatzy"));
         $data = [];
 
-        if($_POST["gameaction"] == "roll" && Session::get("throws") != 3) {
+        if ($_POST["gameaction"] == "roll" && Session::get("throws") != 3) {
             $data = $yatzy->diceReturn();
             $throws = Session::get("throws") + 1;
             Session::put("throws", $throws);

@@ -14,12 +14,10 @@ class DiceTest extends TestCase
         $dice = new Dice($sides);
 
         $this->assertEquals($sides, $dice->sides);
-        // $response = $this->get('/');
-
-        // $response->assertStatus(200);
     }
 
-    public function testDiceRoll() {
+    public function testDiceRoll()
+    {
         $dice = new Dice(4);
 
         $this->assertEquals(0, $dice->getLastRoll());

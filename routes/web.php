@@ -5,6 +5,7 @@ use App\Http\Controllers\HelloWorldController;
 use App\Http\Controllers\DiceController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\YatzyController;
+
 // use App\Http\Controllers\MainController;
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +27,9 @@ Route::get('/', function () {
     Session::put('name', 'your2name');
     // echo Session::get('name');
     // $_SESSION["hi"] = "arg";
-    
     return view('frontpage'); //frontpage är namnet på en vy
 });
-Route::get('/greeting', function() {
+Route::get('/greeting', function () {
     return "hej hej";
 });
 

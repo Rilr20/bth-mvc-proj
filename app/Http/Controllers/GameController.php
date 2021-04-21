@@ -36,7 +36,8 @@ class GameController extends Controller
         //     ->createResponse(200)
         //     ->withBody($psr17Factory->createStream($body));
     }
-    public function gamelogic() {
+    public function gamelogic()
+    {
         $callable = unserialize(Session::get("game"));
 
         $data = ["header" => "hi", "message" => "hej"];
@@ -80,7 +81,7 @@ class GameController extends Controller
                     // unset($_SESSION["computerDice"]);
                     Session::forget("computerDice");
                     // if (!isset($_SESSION["game"])) {
-                    if(Session::get("game") == null) {
+                    if (Session::get("game") == null) {
                         $callable = new Game();
                         // $_SESSION["game"] = serialize($callable);
                         Session::put("game", serialize($callable));

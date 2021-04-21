@@ -9,7 +9,7 @@ use ReflectionClass;
 
 class GameTest extends TestCase
 {
-    public function testInitGame() 
+    public function testInitGame()
     {
         $game = new Game();
         $data = $game->initGame();
@@ -23,7 +23,7 @@ class GameTest extends TestCase
         $this->assertEquals($exp, $data);
     }
 
-    public function testPlayGame() 
+    public function testPlayGame()
     {
         $game = new Game();
         $numOfDie = 2;

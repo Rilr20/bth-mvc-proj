@@ -12,7 +12,7 @@ class HelloWorldController extends Controller
      * @param  string  $message
      * @return \Illuminate\View\View
      */
-    public function hello($message=null)
+    public function hello($message = null)
     {
         //message är vy namn
         return view('message', [

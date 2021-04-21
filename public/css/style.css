@@ -62,13 +62,13 @@ body {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
     "a . c"
     "d e f"
     "g . i";
     background-color:#fff3e2;
     padding: 4px;
-    box-shadow: 
+    box-shadow:
         inset -2px 0px #beb7ad,
         inset 2px -2px #beb7ad,
         inset 2px  0px #beb7ad;
