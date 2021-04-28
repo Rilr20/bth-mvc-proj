@@ -19,6 +19,8 @@
             <li><a href="{{url('/dice')}}">Tärning</a></li>
             <li><a href="{{url('/game')}}">Game 21</a></li>
             <li><a href="{{url('/yatzy')}}">Yatzy</a></li>
+            <li><a href="{{url('/highscore')}}">Highscore</a></li>
+            <li><a href="{{url('/book')}}">Books</a></li>
         </ul>
     </nav>
     <main class="main">

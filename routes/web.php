@@ -5,6 +5,8 @@ use App\Http\Controllers\HelloWorldController;
 use App\Http\Controllers\DiceController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\YatzyController;
+use App\Http\Controllers\BooksController;
+use App\Http\Controllers\HighscoreController;
 
 // use App\Http\Controllers\MainController;
 /*
@@ -58,3 +60,7 @@ Route::get('/hello-world-view', function () {
 });
 Route::get('/hello', [HelloWorldController::class, 'hello']);
 Route::get('/hello/{message}', [HelloWorldController::class, 'hello']);
+
+Route::resource('/book', BooksController::class);
+Route::resource('/highscore', HighscoreController::class);
+
