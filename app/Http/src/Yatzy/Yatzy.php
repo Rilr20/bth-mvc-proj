@@ -170,6 +170,10 @@ class Yatzy
         }
         $this->calculateSum();
         // $_SESSION["playerScore"] = $this->playerScore;
+        if($next == 5) {
+            Session::put("end", true);
+            Session::put("totalScore", $this->playerScore[6]);
+        }
         Session::put("playerScore", $this->playerScore);
         return $this->render($this->playerScore, $this->computerScore);
         //gör arraysaker

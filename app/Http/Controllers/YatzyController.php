@@ -22,6 +22,8 @@ class YatzyController extends Controller
     {
         Session::forget("throws");
         Session::forget("playerScore");
+        Session::forget('end');
+        Session::forget('totalScore');
     }
 
     public function gameActions()
@@ -42,6 +44,14 @@ class YatzyController extends Controller
             Session::put("throws", 0);
         }
 
-        return view("yatzy", $data);
+        if(Session::get('end') == true) {
+            $data["totalScore"] = Session::get('totalScore');
+            $this->resetGame();
+            $view = 'yatzyscore';
+        } else {
+            $view = 'yatzy';
+        }
+
+        return view($view, $data);
     }
 }
