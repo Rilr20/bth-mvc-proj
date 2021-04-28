@@ -13,7 +13,7 @@
     <exclude-pattern>vendor</exclude-pattern>
 
     <exclude-pattern>storage</exclude-pattern>
-    <exclude-pattern>database</exclude-pattern>
+    <!-- <exclude-pattern>database</exclude-pattern> -->
     <exclude-pattern>config</exclude-pattern>
     <exclude-pattern>server</exclude-pattern>
 
