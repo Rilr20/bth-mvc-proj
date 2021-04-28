@@ -4,8 +4,8 @@
     $tabledata = $tabledata ?? null;
     $computerDice = $computerDice ?? null;
     $playerDice = $playerDice ?? [];
-    $throws = $_SESSION["throws"] ?? null;
-    $throws = 3 - $throws;
+    $throws = Session::get("throws") ?? null;
+    $throws = (3 - $throws);
 @endphp
 @section('content')
 <h1>{{$header}}</h1>
