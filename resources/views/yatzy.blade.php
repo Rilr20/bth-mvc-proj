@@ -26,9 +26,11 @@
     </div>
     <div class="dice-box player">
         @foreach ($playerDice as $dice)
-            {!! html_entity_decode($dice) !!}
-            {!! html_entity_decode( "<input type='checkbox' name='chosenDice[]' value='" .  substr_count($dice, "<span class='dot'></span>") . "'>") !!}
-            {!! html_entity_decode( "<input type='hidden' name='Dice[]' value=" .  substr_count($dice, "<span class='dot'></span>") . "'>") !!}
+            <div class="dice-input">
+                {!! html_entity_decode($dice) !!}
+                {!! html_entity_decode( "<input type='checkbox' name='chosenDice[]' value='" .  substr_count($dice, "<span class='dot'></span>") . "'>") !!}
+                {!! html_entity_decode( "<input type='hidden' name='Dice[]' value=" .  substr_count($dice, "<span class='dot'></span>") . "'>") !!}
+            </div>
             {{-- @@php
                 echo "<input type='checkbox' name='chosenDice[]' value='" .  substr_count($die, "<span class='dot'></span>") . "'>";
                 echo "<input type='hidden' name='Dice[]' value=" .  substr_count($die, "<span class='dot'></span>") . "'>";
