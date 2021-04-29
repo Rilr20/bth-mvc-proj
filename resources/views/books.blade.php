@@ -1,16 +1,17 @@
 @extends('layout.main')
 
 @section('content')
-<h1>Bokhandel</h1>
+<h1>Böcker</h1>
 <div class="book-items">
     
     @foreach ($books as $book)
         <div class="item">
-            <p> {{$book->title}} </p>
-            <p> {{ $book->author }}</p>
-            <p>ISBN: {{ $book->isbn }}</p>
-            <p>BILD:</p>
-            <hr>
+            <div class="information">
+                <p> {{$book->title}}, År: {{$book->published}} </p>
+                <p> {{ $book->author }}</p>
+                <p>ISBN: {{ $book->isbn }}</p>
+            </div>
+            <img class="book-cover" src="{{ asset("img/$book->image.jpg") }}" alt="{{$book->title}}">
         </div>
     @endforeach
 </div>
