@@ -145,3 +145,24 @@ body {
     text-align: center;
 
 }
+
+.book-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.item {
+    display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.information p {
+    font-size: 1.2rem;
+}
+
+.book-cover {
+    width: 250px;
+}
