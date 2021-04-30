@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <phpunit
-    bootstrap="test/config.php">
+    bootstrap="tests/config.php">
 
     <testsuites>
         <testsuite name="all">
-            <directory>test</directory>
+            <directory>tests</directory>
         </testsuite>
     </testsuites>
 
