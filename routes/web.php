@@ -63,4 +63,3 @@ Route::get('/hello/{message}', [HelloWorldController::class, 'hello']);
 
 Route::resource('/book', BooksController::class);
 Route::resource('/highscore', HighscoreController::class);
-
