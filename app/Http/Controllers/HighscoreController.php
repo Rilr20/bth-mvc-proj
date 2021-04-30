@@ -19,7 +19,7 @@ class HighscoreController extends Controller
             ->take(10);
             // ->get();
 
-        return view('highscore',[
+        return view('highscore', [
             'highscore' => $highscore
         ]);
     }

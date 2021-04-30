@@ -44,7 +44,7 @@ class YatzyController extends Controller
             Session::put("throws", 0);
         }
 
-        if(Session::get('end') == true) {
+        if (Session::get('end') == true) {
             $data["totalScore"] = Session::get('totalScore');
             $this->resetGame();
             $view = 'yatzyscore';
