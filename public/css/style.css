@@ -131,7 +131,7 @@ body {
 
 }
 
-.highscores th {
+/* .highscores th {
     text-align: left;
 }
 
@@ -145,12 +145,10 @@ body {
 .highscores td {
     height: 40px;
     vertical-align: bottom;
-}
-
+} */
 
 .center {
     text-align: center;
-
 }
 
 .book-items {
@@ -174,4 +172,28 @@ body {
     width: 250px;
 }
 
+.highscore {
+    margin: auto;
+    width: 45%;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
 
+.highscore-header {
+    display: grid;
+    font-size: 14pt;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-bottom: 2px solid black;
+}
+
+.highscore-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid black;
+    margin: auto;
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
+}
