@@ -27,7 +27,7 @@
     @csrf
     
         <label for="username">Username</label>
-        <input type="text" name="username" placeholder="username...">
+        <input type="text" name="username" placeholder="username..." maxlength="30">
         <input type="hidden" name="totalscore" value="{{$totalScore}}" id="">
         <button type="submit">Submit score</button>
 </form>
