@@ -51,7 +51,7 @@
                 <p></p>
                 <p></p>
             </div>
-    @endfor
+        @endfor
     </div>
 </div>
 @endsection
