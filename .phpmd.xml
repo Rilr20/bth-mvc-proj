@@ -10,8 +10,6 @@
         Custom rule set for mvc course.
     </description>
 
-    <exclude-pattern>cache</exclude-pattern>
-    <exclude-pattern>htdocs</exclude-pattern>
     <exclude-pattern>vendor</exclude-pattern>
 
     <rule ref="rulesets/design.xml" />

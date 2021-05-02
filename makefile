@@ -78,7 +78,7 @@ phpcpd: prepare
 	$(PHPCPD) src | tee build/phpcpd
 
 phpmd: prepare
-	- [ ! -f .phpmd.xml ] || [ ! -d src ] || $(PHPMD) . text .phpmd.xml | tee build/phpmd
+	- [ ! -f .phpmd.xml ] || [ ! -d app ] || $(PHPMD) . text .phpmd.xml | tee build/phpmd
 
 phpstan: prepare
 	- [ ! -f .phpstan.neon ] || $(PHPSTAN) analyse -c .phpstan.neon | tee build/phpstan
