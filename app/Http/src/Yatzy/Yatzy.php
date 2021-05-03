@@ -25,7 +25,7 @@ class Yatzy
     const DICEAMOUNT = 5;
     const DICESIDES = 6;
     const TABLEDATA = ["Ones", "Twos", "Threes", "Fours", "Fives", "Sixes", "Sum", "Bonus", "Three of a kind", "Four of a kind", "Full House", "Small Straight", "Large Straight", "Chance", "Yatzy", "Total Score"];
-    const BORDER = ["Sum","Three of a kind", "Total Score"];
+    const BORDER = ["Sum", "Three of a kind", "Total Score"];
     public function render($playerScore, $computerScore): array
     {
         $loopdata = "";
@@ -34,7 +34,7 @@ class Yatzy
             "message" => "Hello, this is the Yatzy page, rendered as a layout."
         ];
         $i = 0;
-        $htmlClass =  "<tr class='border'>";
+        $htmlClass = "<tr class='border'>";
         foreach (self::TABLEDATA as $row) {
             // if (in_array($row, self::BORDER)) {
             //     $loopdata = $loopdata . "<tr class='border'>";

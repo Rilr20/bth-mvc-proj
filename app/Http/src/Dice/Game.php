@@ -168,17 +168,17 @@ class Game
         // }
         $newResult = [];
         if ($computerSum == 21) {
-            $string = $pLoss;//"datorn har 21 förlust"; // funkar $pLoss
+            $string = $pLoss; //"datorn har 21 förlust"; // funkar $pLoss
         } else if ($playerSum == 21) {
-            $string = $pWin;//"spelaren har 21 vinst"; // funkar $pWin
+            $string = $pWin; //"spelaren har 21 vinst"; // funkar $pWin
         } else if ($playerSum > 21) {
-            $string = $pLoss;//"spelaren har över 21 förlust"; // funkar $pLoss
+            $string = $pLoss; //"spelaren har över 21 förlust"; // funkar $pLoss
         } else if ($computerSum > 21) {
-            $string = $pWin;//"datorn har över 21 vinst"; // funkar $pWin
+            $string = $pWin; //"datorn har över 21 vinst"; // funkar $pWin
         } else if ($computerSum > $playerSum && $computerSum < 21) {
             $string = $pLoss; //"datorn har högre än spelaren och mindre än 21 förlust"; // funkar $pLoss
         } else if ($playerSum > $computerSum && $playerSum < 21) {
-            $string = $pWin;//"spelaren har högre än datorn men mindre än 21 Vinst"; // funkar $pWin
+            $string = $pWin; //"spelaren har högre än datorn men mindre än 21 Vinst"; // funkar $pWin
         } else if ($playerSum == $computerSum) {
             $string = $pLoss; //spelaren och datorn har lika mycket, förlust
         }
