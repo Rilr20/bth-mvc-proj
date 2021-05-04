@@ -44,69 +44,67 @@ class GameController extends Controller
         $view = "gamestart";
         // $gameOption = Input::get('gameaction');
         // var_dump($_POST);
-        if (isset($_POST["options"])) {
-            switch ($_POST["options"]) {
-                case 1:
-                    // echo "en tärning";
-                    $data = $callable->playGame(1);
-                    break;
 
-                case 2:
-                    // echo "två tärningar";
-                    $data = $callable->playGame(2);
-                    break;
+        switch ($_POST["gameAction"]) {
+            case 1:
+                // echo "en tärning";
+                $data = $callable->playGame(1);
+                $view = "gameplay";
+                
+                break;
+            case 2:
+                // echo "två tärningar";
+                $data = $callable->playGame(2);
+                $view = "gameplay";
+                break;
+            case "roll":
+                // $player = unserialize($_SESSION["player"]);
+                $player = unserialize(Session::get("player"));
+                // $data = $callable->playerRoll($player, $_POST["player"], $_POST["computer"], $_SESSION["computerDice"]);
+                $data = $callable->playerRoll($player, $_POST["player"], $_POST["computer"], Session::get("computerDice"));
+                $view = "gameplay";
+
+                break;
+
+            case "stay":
+                // $computer = unserialize($_SESSION["computer"]);
+                $computer = unserialize(Session::get("computer"));
+                // computer does its thing :D
+                // $data = $callable->computerRoll($computer, $_POST["computer"], $_POST["player"]);
+                $data = $callable->computerRoll($computer, $_POST["computer"], $_POST["player"]);
+                // annan vy
+                $view = "gameintermission";
+                break;
+            case "reset":
+                // unset($_SESSION["computerDice"]);
+                Session::forget("computerDice");
+                // if (!isset($_SESSION["game"])) {
+                if (Session::get("game") == null) {
+                    $callable = new Game();
+                    // $_SESSION["game"] = serialize($callable);
+                    Session::put("game", serialize($callable));
+                }
+                // $callable = unserialize($_SESSION["game"]);
+                $callable = unserialize(Session::get("game"));
+                $data = $callable->initGame();
+                $view = "gamestart";
+                break;
+            case "resetscore":
+                // echo "reset score     ";
+                // $_SESSION["resultArray"] = [];
+                Session::put("resultArray", []);
+                if (Session::get("game") == null) {
+                    $callable = new Game();
+                    // $_SESSION["game"] = serialize($callable);
+                    Session::put("game", serialize($callable));
+                }
+                // $callable = unserialize($_SESSION["game"]);
+                $callable = unserialize(Session::get("game"));
+                $data = $callable->initGame();
+                $view = "gamestart";
+                break;
             }
-            $view = "gameplay";
-        } else if (isset($_POST["gameAction"])) {
-            switch ($_POST["gameAction"]) {
-                case "roll":
-                    // $player = unserialize($_SESSION["player"]);
-                    $player = unserialize(Session::get("player"));
-                    // $data = $callable->playerRoll($player, $_POST["player"], $_POST["computer"], $_SESSION["computerDice"]);
-                    $data = $callable->playerRoll($player, $_POST["player"], $_POST["computer"], Session::get("computerDice"));
-                    $view = "gameplay";
-
-                    break;
-
-                case "stay":
-                    // $computer = unserialize($_SESSION["computer"]);
-                    $computer = unserialize(Session::get("computer"));
-                    // computer does its thing :D
-                    // $data = $callable->computerRoll($computer, $_POST["computer"], $_POST["player"]);
-                    $data = $callable->computerRoll($computer, $_POST["computer"], $_POST["player"]);
-                    // annan vy
-                    $view = "gameintermission";
-                    break;
-                case "reset":
-                    // unset($_SESSION["computerDice"]);
-                    Session::forget("computerDice");
-                    // if (!isset($_SESSION["game"])) {
-                    if (Session::get("game") == null) {
-                        $callable = new Game();
-                        // $_SESSION["game"] = serialize($callable);
-                        Session::put("game", serialize($callable));
-                    }
-                    // $callable = unserialize($_SESSION["game"]);
-                    $callable = unserialize(Session::get("game"));
-                    $data = $callable->initGame();
-                    $view = "gamestart";
-                    break;
-                case "resetscore":
-                    // echo "reset score     ";
-                    // $_SESSION["resultArray"] = [];
-                    Session::put("resultArray", []);
-                    if (Session::get("game") == null) {
-                        $callable = new Game();
-                        // $_SESSION["game"] = serialize($callable);
-                        Session::put("game", serialize($callable));
-                    }
-                    // $callable = unserialize($_SESSION["game"]);
-                    $callable = unserialize(Session::get("game"));
-                    $data = $callable->initGame();
-                    $view = "gamestart";
-                    break;
-            }
-        }
+        
         return view($view, $data);
     }
 }
