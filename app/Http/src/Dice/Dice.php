@@ -16,7 +16,7 @@ class Dice
     public int $sides;
     private int $latestThrow = 0;
     /**
-     * Get funktion for $sides
+     * $sides get function
      */
     public function __construct($sides)
     {
