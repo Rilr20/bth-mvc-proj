@@ -1,0 +1,26 @@
+PHPUnit 9.5.4 by Sebastian Bergmann and contributors.
+
+  Warning - The configuration file did not pass validation!
+  The following problems have been detected:
+
+  Line 17:
+  - Element 'filter': This element is not expected.
+
+  Test results may not be as expected.
+
+
+W.........................                                        26 / 26 (100%)
+
+Time: 00:28.996, Memory: 34.00 MB
+
+There was 1 warning:
+
+1) Warning
+No tests found in class "Tests\Feature\ExampleTest".
+
+WARNINGS!
+Tests: 26, Assertions: 94, Warnings: 1.
+
+Generating code coverage report in Clover XML format ... done [00:00.219]
+
+Generating code coverage report in HTML format ... done [00:01.504]

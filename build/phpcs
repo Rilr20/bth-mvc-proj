@@ -1,0 +1,83 @@
+
+FILE: D:\Users\BrödKatt\dbwebb-Kurser\mvc\me\proj\app\Exceptions\Handler.php
+-----------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------
+ 37 | ERROR | [x] Expected 1 space after FUNCTION keyword; 0 found
+-----------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------
+
+
+FILE: ...rödKatt\dbwebb-Kurser\mvc\me\proj\app\Http\Controllers\GameController.php
+--------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 3 LINES
+--------------------------------------------------------------------------------
+  53 | ERROR | [x] Whitespace found at end of line
+ 106 | ERROR | [x] Line indented incorrectly; expected 8 spaces, found 12
+ 106 | ERROR | [x] Closing brace indented incorrectly; expected 8 spaces, found
+     |       |     12
+ 107 | ERROR | [x] Whitespace found at end of line
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 4 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...BrödKatt\dbwebb-Kurser\mvc\me\proj\app\Providers\RouteServiceProvider.php
+--------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 2 LINES
+--------------------------------------------------------------------------------
+ 40 | ERROR | [x] Expected 1 space after FUNCTION keyword; 0 found
+ 59 | ERROR | [x] Space before opening parenthesis of function call prohibited
+ 59 | ERROR | [x] Expected 1 space after FUNCTION keyword; 0 found
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 3 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...r\mvc\me\proj\database\migrations\2014_10_12_000000_create_users_table.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 7 | ERROR | Each class must be in a namespace of at least one level (a
+   |       | top-level vendor name)
+--------------------------------------------------------------------------------
+
+
+FILE: ...roj\database\migrations\2014_10_12_100000_create_password_resets_table.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 7 | ERROR | Each class must be in a namespace of at least one level (a
+   |       | top-level vendor name)
+--------------------------------------------------------------------------------
+
+
+FILE: ...me\proj\database\migrations\2019_08_19_000000_create_failed_jobs_table.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 7 | ERROR | Each class must be in a namespace of at least one level (a
+   |       | top-level vendor name)
+--------------------------------------------------------------------------------
+
+
+FILE: ...r\mvc\me\proj\database\migrations\2021_04_27_182849_create_books_table.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 7 | ERROR | Each class must be in a namespace of at least one level (a
+   |       | top-level vendor name)
+--------------------------------------------------------------------------------
+
+
+FILE: ...\me\proj\database\migrations\2021_04_27_210038_create_highscores_table.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 7 | ERROR | Each class must be in a namespace of at least one level (a
+   |       | top-level vendor name)
+--------------------------------------------------------------------------------
+
+Time: 3.36 secs; Memory: 8MB
+

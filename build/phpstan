@@ -1,0 +1,198 @@
+ ------ ---------------------------------------------------------------------- 
+ [32m Line [39m [32m app\http\Controllers\BooksController.php                             [39m 
+ ------ ---------------------------------------------------------------------- 
+[39;49m  31     Method App\Http\Controllers\BooksController::index() should return[39;49m[39;49m    [39;49m
+[39;49m         [39;49m[39;49mIlluminate\Http\Response but returns[39;49m[39;49m                                  [39;49m
+[39;49m         [39;49mIlluminate\Contracts\View\Factory|Illuminate\Contracts\View\View.     
+[39;49m  43     Method App\Http\Controllers\BooksController::create() should return[39;49m[39;49m   [39;49m
+[39;49m         [39;49mIlluminate\Http\Response but return statement is missing.             
+[39;49m  54     Method App\Http\Controllers\BooksController::store() should return[39;49m[39;49m    [39;49m
+[39;49m         [39;49mIlluminate\Http\Response but return statement is missing.             
+[39;49m  65     Method App\Http\Controllers\BooksController::show() should return[39;49m[39;49m     [39;49m
+[39;49m         [39;49mIlluminate\Http\Response but return statement is missing.             
+[39;49m  76     Method App\Http\Controllers\BooksController::edit() should return[39;49m[39;49m     [39;49m
+[39;49m         [39;49mIlluminate\Http\Response but return statement is missing.             
+[39;49m  88     Method App\Http\Controllers\BooksController::update() should return[39;49m[39;49m   [39;49m
+[39;49m         [39;49mIlluminate\Http\Response but return statement is missing.             
+[39;49m  99     Method App\Http\Controllers\BooksController::destroy() should return[39;49m[39;49m  [39;49m
+[39;49m         [39;49mIlluminate\Http\Response but return statement is missing.             
+ ------ ---------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------- 
+ [32m Line [39m [32m app\http\Controllers\GameController.php                            [39m 
+ ------ -------------------------------------------------------------------- 
+[39;49m  17     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  19     Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  21     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  41     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  62     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  64     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  71     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  80     Call to static method forget() on an unknown class Session.[39;49m[39;49m         [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  82     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  85     Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  88     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  95     Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  96     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  99     Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  102    Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+ ------ -------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------- 
+ [32m Line [39m [32m app\http\Controllers\HelloWorldController.php                     [39m 
+ ------ ------------------------------------------------------------------- 
+[39;49m  18     Method App\Http\Controllers\HelloWorldController::hello() should[39;49m[39;49m   [39;49m
+[39;49m         [39;49m[39;49mreturn Illuminate\View\View but returns[39;49m[39;49m                            [39;49m
+[39;49m         [39;49mIlluminate\Contracts\View\Factory|Illuminate\Contracts\View\View.  
+ ------ ------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+ [32m Line [39m [32m app\http\Controllers\HighscoreController.php                          [39m 
+ ------ ----------------------------------------------------------------------- 
+[39;49m  22     Method App\Http\Controllers\HighscoreController::index() should[39;49m[39;49m        [39;49m
+[39;49m         [39;49m[39;49mreturn Illuminate\Http\Response but returns[39;49m[39;49m                            [39;49m
+[39;49m         [39;49mIlluminate\Contracts\View\Factory|Illuminate\Contracts\View\View.      
+[39;49m  34     Method App\Http\Controllers\HighscoreController::create() should[39;49m[39;49m       [39;49m
+[39;49m         [39;49mreturn Illuminate\Http\Response but return statement is missing.       
+  52     Call to an undefined static method App\Models\Highscores::create().    
+[39;49m  58     Method App\Http\Controllers\HighscoreController::store() should[39;49m[39;49m        [39;49m
+[39;49m         [39;49m[39;49mreturn Illuminate\Http\Response but returns[39;49m[39;49m                            [39;49m
+[39;49m         [39;49mIlluminate\Http\RedirectResponse|Illuminate\Routing\Redirector.        
+[39;49m  69     Method App\Http\Controllers\HighscoreController::show() should return[39;49m[39;49m  [39;49m
+[39;49m         [39;49mIlluminate\Http\Response but return statement is missing.              
+[39;49m  80     Method App\Http\Controllers\HighscoreController::edit() should return[39;49m[39;49m  [39;49m
+[39;49m         [39;49mIlluminate\Http\Response but return statement is missing.              
+[39;49m  92     Method App\Http\Controllers\HighscoreController::update() should[39;49m[39;49m       [39;49m
+[39;49m         [39;49mreturn Illuminate\Http\Response but return statement is missing.       
+[39;49m  103    Method App\Http\Controllers\HighscoreController::destroy() should[39;49m[39;49m      [39;49m
+[39;49m         [39;49mreturn Illuminate\Http\Response but return statement is missing.       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------- 
+ [32m Line [39m [32m app\http\Controllers\YatzyController.php                           [39m 
+ ------ -------------------------------------------------------------------- 
+[39;49m  16     Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  23     Call to static method forget() on an unknown class Session.[39;49m[39;49m         [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  24     Call to static method forget() on an unknown class Session.[39;49m[39;49m         [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  25     Call to static method forget() on an unknown class Session.[39;49m[39;49m         [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  26     Call to static method forget() on an unknown class Session.[39;49m[39;49m         [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  31     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  34     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  36     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  37     Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  38     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  40     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  41     Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  44     Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  47     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  48     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+ ------ -------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------- 
+ [32m Line [39m [32m app\http\Middleware\Authenticate.php                                [39m 
+ ------ --------------------------------------------------------------------- 
+[39;49m  17     Method App\Http\Middleware\Authenticate::redirectTo() should return[39;49m[39;49m  [39;49m
+[39;49m         [39;49mstring|null but return statement is missing.                         
+ ------ --------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------- 
+ [32m Line [39m [32m app\http\src\Dice\Game.php                                         [39m 
+ ------ -------------------------------------------------------------------- 
+[39;49m  36     Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  63     Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  65     Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  119    Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  164    Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  165    Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  201    Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  201    Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  203    Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+ ------ -------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------- 
+ [32m Line [39m [32m app\http\src\Yatzy\Yatzy.php                                       [39m 
+ ------ -------------------------------------------------------------------- 
+[39;49m  67     Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  92     Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  93     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  95     Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  99     Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  112    Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  113    Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  115    Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  118    Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  140    Call to static method get() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  174    Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  175    Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+[39;49m  177    Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+ ------ -------------------------------------------------------------------- 
+
+ ------ --------------------------- 
+ [32m Line [39m [32m routes\console.php        [39m 
+ ------ --------------------------- 
+  18     Undefined variable: $this  
+ ------ --------------------------- 
+
+ ------ -------------------------------------------------------------------- 
+ [32m Line [39m [32m routes\web.php                                                     [39m 
+ ------ -------------------------------------------------------------------- 
+[39;49m  29     Call to static method put() on an unknown class Session.[39;49m[39;49m            [39;49m
+[39;49m         [39;49m💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+ ------ -------------------------------------------------------------------- 
+
+[37;41m                                                                               [39;49m
+[37;41m [ERROR] Found 71 errors                                                       [39;49m
+[37;41m                                                                               [39;49m
+
