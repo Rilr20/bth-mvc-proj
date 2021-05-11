@@ -15,5 +15,5 @@ class Book extends Model
 
     protected $timestamp = true;
 
-    protected $dataFormat = 'h:m:s';
+    protected $dataFormat = 'h:i:s';
 }

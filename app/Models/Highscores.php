@@ -15,7 +15,7 @@ class Highscores extends Model
 
     protected $timestamp = true;
 
-    protected $dataFormat = 'h:m:s';
+    protected $dataFormat = 'h:i:s';
 
     protected $fillable = ['username', 'score', 'achieved'];
 }
