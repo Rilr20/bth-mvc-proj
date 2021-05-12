@@ -22,6 +22,7 @@
             <li><a href="{{url('/yatzy')}}">Yatzy</a></li>
             <li><a href="{{url('/highscore')}}">Highscore</a></li>
             <li><a href="{{url('/book')}}">Books</a></li>
+            <li><a href="{{url('/blog')}}">Blog</a></li>
         </ul>
     </nav>
     <main class="main">

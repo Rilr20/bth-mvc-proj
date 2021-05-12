@@ -7,7 +7,7 @@ use App\Http\Controllers\GameController;
 use App\Http\Controllers\YatzyController;
 use App\Http\Controllers\BooksController;
 use App\Http\Controllers\HighscoreController;
-
+use App\Http\Controllers\BlogController;
 // use App\Http\Controllers\MainController;
 /*
 |--------------------------------------------------------------------------
@@ -63,3 +63,6 @@ Route::get('/hello/{message}', [HelloWorldController::class, 'hello']);
 
 Route::resource('/book', BooksController::class);
 Route::resource('/highscore', HighscoreController::class);
+
+Route::get("/blog/admin", 'App\Http\Controllers\BlogController@admin');
+Route::resource("/blog", BlogController::class);
