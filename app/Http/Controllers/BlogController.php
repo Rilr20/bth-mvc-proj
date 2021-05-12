@@ -16,7 +16,7 @@ class BlogController extends Controller
      */
     public function index()
     {   
-        $blogs = Blog::all()->where('published', '<', Carbon::now('Europe/Stockholm'))->where('deleted_at', "=", null)
+        $blogs = Blog::all()->where('published', '<=', Carbon::now('Europe/Stockholm'))->where('deleted_at', "=", null)
             ->sortByDesc('published');
         // dd($blogs);
         return view('blog.blog', [
@@ -47,13 +47,16 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         //
+        $BlogHelp = new BlogHelp();
+        $published = $BlogHelp->checkDateInput($request->input('published-date'),$request->input('published-time'));
+        // dd($published);
         $blog = Blog::make([
             'header' => $request->input('header'),
             'bodytext' => $request->input('bodytext'),
             'image_one' => $request->input('image_one'),
             'image_two' => $request->input('image_two'),
             'author' => $request->input('author'),
-            'published' => $request->input('published')
+            'published' => $published
         ]);
 
         $blog->save();

@@ -33,4 +33,11 @@ class BlogHelp
         }
         return self::BLOG_TYPES[$count];
     }
+
+    public function checkDateInput($date, $time) {
+        $date = ($date == null) ? now()->toDateString() : $date;
+        $time = ($time == null) ? now()->toTimeString() : $time;
+
+        return $date . " ". $time;
+    }
 }
