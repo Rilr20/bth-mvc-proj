@@ -31,4 +31,13 @@ Class BlogHelp:
         if $blog->published <= now():
             return True
         return False
+
+    # En funktion som ska kolla om datumet är giltligt
+
+    public function checkDateInput($date, $time):
+        if time == null:
+            time = now()
+        if date == null:
+            date = no()
+        return time date
 </pre>
