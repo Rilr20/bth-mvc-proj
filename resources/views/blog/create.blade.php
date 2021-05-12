@@ -23,8 +23,9 @@
                 <input type="text" name="author" placeholder="Skribent...">
             </div>
             <div class="form-input">
-                <label>Tid det ska publiserat</label>
-                <input type="text" name="published" value="{{now()}}">
+                <label>Tid det ska publiserat om tom publiseras det nu</label>
+                <input type="date" name="published-date" value="{{now()}}">
+                <input type="time" name="published-time" value="{{now()}}">
             </div>
             <div class="form-input div-button">
                 {{-- <input type="submit" value="Skapa"> --}}
