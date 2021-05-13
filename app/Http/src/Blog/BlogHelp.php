@@ -10,20 +10,9 @@ namespace Rilr\Blog;
 class BlogHelp
 {
     private const BLOG_TYPES = ['textblog', 'standardblog', 'doubleblog'];
-    /**
-     * array med olika vyer 
-     * om 0 bilder finns skicka vy1  om 1 bild fins skicka vy2 om 2 bilder finns skicka v3 
-     * 
-     * Om bild nummer två är i fylld medans bild nummer 1 inte är
-     * 
-     * Bildcheck kolla om det är null eller inte på bildkollumnerna från sql query
-     * 
-     * Kolla om det är gårdagens datum
-     * 
-     * En check om datumet på ett inlägg är publiserat eller inte
-     * 
-     */
-    public function blogtype($sqldata) {
+    
+    public function blogtype($sqldata)
+    {
          $count = 0;
         if ($sqldata->image_one != null) {
             $count++;
@@ -34,7 +23,24 @@ class BlogHelp
         return self::BLOG_TYPES[$count];
     }
 
-    public function checkDateInput($date, $time) {
+    public function imageCheck($image1, $image2)
+    {
+        if ($image2 != null && $image1 == null) {
+            return [$image2, $image1];
+        }
+        return [$image1, $image2];
+    }
+
+    public function isPublished($blogDate) 
+    {
+        if ($blogDate <= now()) {
+            return true;
+        }
+        return false;
+    }
+
+    public function checkDateInput($date, $time)
+    {
         $date = ($date == null) ? now()->toDateString() : $date;
         $time = ($time == null) ? now()->toTimeString() : $time;
 
