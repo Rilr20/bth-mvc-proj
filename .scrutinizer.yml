@@ -13,7 +13,6 @@ build:
                     version: 7.4
     tests:
         override:
-            -
             - php-scrutinizer-run
                 command: "make phpunit"
                 coverage:
