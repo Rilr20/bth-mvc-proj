@@ -8,7 +8,7 @@ use App\Http\Controllers\YatzyController;
 use App\Http\Controllers\BooksController;
 use App\Http\Controllers\HighscoreController;
 use App\Http\Controllers\BlogController;
-// use App\Http\Controllers\MainController;
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,7 +29,7 @@ Route::get('/', function () {
     Session::put('name', 'your2name');
     // echo Session::get('name');
     // $_SESSION["hi"] = "arg";
-    return view('frontpage'); //frontpage är namnet på en vy
+    return view('frontpage', ['title' => 'laravel']); //frontpage är namnet på en vy
 });
 Route::get('/greeting', function () {
     return "hej hej";
@@ -64,5 +64,10 @@ Route::get('/hello/{message}', [HelloWorldController::class, 'hello']);
 Route::resource('/book', BooksController::class);
 Route::resource('/highscore', HighscoreController::class);
 
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login/checklogin', [LoginController::class, 'checklogin']);
+Route::get('login/logout', [LoginController::class, 'logout']);
+
 Route::get("/blog/admin", 'App\Http\Controllers\BlogController@admin');
 Route::resource("/blog", BlogController::class);
+

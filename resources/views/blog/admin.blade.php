@@ -1,7 +1,11 @@
 @extends('layout/main')
 @section('title', $title ?? "no title")
 @section('content')
+    
     <h1>Admin</h1>
+    @if (isset(Auth::user()->username))
+        <p>Hej {{Auth::user()->username}}!</p>
+    @endif
     <div class="admin-div">
     <a class="new" href="{{url("/blog/create")}}">Nytt Inlägg &rarr;</a>
     @foreach ($blogs as $blog)
