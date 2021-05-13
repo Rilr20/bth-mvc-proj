@@ -53,12 +53,13 @@ class BlogController extends Controller
         //
         $BlogHelp = new BlogHelp();
         $published = $BlogHelp->checkDateInput($request->input('published-date'),$request->input('published-time'));
+        $imageArray = $BlogHelp->imageCheck($request->input('image_one'), $request->input('image_two'));
         // dd($published);
         $blog = Blog::make([
             'header' => $request->input('header'),
             'bodytext' => $request->input('bodytext'),
-            'image_one' => $request->input('image_one'),
-            'image_two' => $request->input('image_two'),
+            'image_one' => $imageArray[0],
+            'image_two' => $imageArray[1],
             'author' => $request->input('author'),
             'published' => $published
         ]);

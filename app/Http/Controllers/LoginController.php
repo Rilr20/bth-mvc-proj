@@ -9,12 +9,12 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    function index() 
+    public function index() 
     {
-        return view('login.login', ["title" => 'Inloggning']);
+        return view('login.login', ['title' => 'Inloggning']);
     }
 
-    function checklogin(Request $request) 
+    public function checklogin(Request $request) 
     {
         // dd($request);
         $user_data = array(
@@ -31,8 +31,8 @@ class LoginController extends Controller
             return view('login.login', ['wrong' => 'Fel inloggning', 'title' => 'Inloggning']);
         }
     }
-    function logout() {
+    public function logout() {
         Auth::logout();
-        return redirect('/', ['title' => 'laravel']);
+        return redirect('/');
     }
 }
