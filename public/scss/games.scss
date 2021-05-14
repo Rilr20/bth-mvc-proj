@@ -1,0 +1,42 @@
+.button,
+.game-button {
+    width: 5rem;
+    height: 3rem;
+    background-color: rgb(165, 196, 134);
+}
+
+.highscores {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    border-collapse: collapse;
+    /* border-spacing: 10px 10px; */
+
+}
+
+.highscore {
+    margin: auto;
+    width: 45%;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.highscore-header {
+    display: grid;
+    font-size: 14pt;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-bottom: 2px solid black;
+}
+
+.highscore-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid black;
+    margin: auto;
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
+}

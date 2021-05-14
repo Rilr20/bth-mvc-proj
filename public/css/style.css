@@ -28,6 +28,8 @@ body {
 }
 
 .nav {
+    display: flex;
+    justify-content: space-between;
     background-color: #ccc;
     height: 50px;
     padding-top: 1em;
@@ -352,4 +354,11 @@ body {
 }
 .edit {
     background: #604eaf;
+}
+
+.hero-image {
+    min-height: 280px;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

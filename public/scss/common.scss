@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    // background-color: $malibu;
+    background-image: linear-gradient($malibu, rgb(204, 224, 253));
+    // background-image: linear-gradient($malibu, #ffe5b6);
+    // #ffe5b6 - orange
+}
+.main {
+    width: 85%;
+    min-height: 900px;
+    height: 100%;
+    // background-color: lighten($malibu, 10%);
+    margin: auto;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 1em;
+}
+
+.footer {
+    background-color: $malibu;
+    height: 75px;
+    padding-top: 25px;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+.footer p {
+    margin-left: 1em;
+    text-align: right;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: $havelock-blue;
+    height: 50px;
+    padding-top: 1em;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.nav ul .active {
+    background-color: lighten($portage, 15%);
+}
+.nav ul li {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: $portage;
+    display: inline;
+    
+}
+
+.nav ul li:hover {
+    background-color: darken($portage, 20%);
+    a,
+    a:visited {
+        color: white;
+    }
+}
+
+.nav ul li a, .nav ul li a:visited {
+    color: black;
+    margin: 1em;
+}
+
+.content {
+    text-align: center;
+}
+
+.bild {
+    height: 600px;
+}
+
+.hero-image {
+    min-height: 300px;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login-form {
+    width: 50%;
+    margin: auto;
+    background-color: oldlace;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    .input-div {
+        display: grid;
+    }
+    .input {
+        // padding: 2.5em;
+        padding: {
+            top: 0.5em;
+            bottom: 0.5em;
+            left: 0.5em
+        };
+        border: $torea-bay 2px solid;
+        border-radius: 5px;
+        margin-bottom: 1.5em;
+        height: 25px;
+    }
+    .login-button {
+        padding: 0.7em;
+        width: 100%;
+        background-color: $portage;
+        color: white;
+        cursor: pointer;
+    }
+    .login-button:hover {
+        background-color: darken($portage, 10%);
+    }
+}
+
+.center {
+    text-align: center;
+}
