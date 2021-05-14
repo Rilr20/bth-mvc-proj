@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Rilr\Blog;
 
 /**
- * Class Dice.
+ * Class BlogHelp.
  */
 class BlogHelp
 {
@@ -46,4 +46,5 @@ class BlogHelp
 
         return $date . " ". $time;
     }
+
 }
