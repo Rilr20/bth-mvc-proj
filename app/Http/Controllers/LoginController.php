@@ -17,19 +17,19 @@ class LoginController extends Controller
     public function checklogin(Request $request) 
     {
         // dd($request);
-        $user_data = array(
+        $userData = array(
             'username' => $request->get('username'),
             'password' => $request->get('password')
         );
 
-        if(Auth::attempt($user_data)) 
+        if(Auth::attempt($userData)) 
         {
             return redirect('blog/admin');
         }
-        else {
+        // else {
             // return back()->with('wrong', 'Fel inloggning');
-            return view('login.login', ['wrong' => 'Fel inloggning', 'title' => 'Inloggning']);
-        }
+        return view('login.login', ['wrong' => 'Fel inloggning', 'title' => 'Inloggning']);
+        // }
     }
     public function logout() {
         Auth::logout();

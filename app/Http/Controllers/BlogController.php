@@ -49,9 +49,9 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         //
-        $BlogHelp = new BlogHelp();
-        $published = $BlogHelp->checkDateInput($request->input('published-date'),$request->input('published-time'));
-        $imageArray = $BlogHelp->imageCheck($request->input('image_one'), $request->input('image_two'));
+        $blogHelp = new BlogHelp();
+        $published = $blogHelp->checkDateInput($request->input('published-date'),$request->input('published-time'));
+        $imageArray = $blogHelp->imageCheck($request->input('image_one'), $request->input('image_two'));
         // dd($published);
         $blog = Blog::make([
             'header' => $request->input('header'),
@@ -75,10 +75,10 @@ class BlogController extends Controller
     public function show($id)
     {
         //här är parameter route
-        $BlogHelp = new BlogHelp();
+        $blogHelp = new BlogHelp();
         $blog = Blog::where('id','=', $id)->firstorfail();
         // $blog = Blog::where('id', $id)->get();
-        $type = $BlogHelp->blogtype($blog);
+        $type = $blogHelp->blogtype($blog);
         return view('blog.' . $type, [
             "blog" => $blog
         ]);

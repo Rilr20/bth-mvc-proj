@@ -41,10 +41,54 @@ class BlogHelp
 
     public function checkDateInput($date, $time)
     {
-        $date = ($date == null) ? now()->toDateString() : $date;
-        $time = ($time == null) ? now()->toTimeString() : $time;
+        $date = $this->checkdate($date);
+        $time = $this->checkTime($time);
+        // $date = ($date == null) ? now()->toDateString() : $date;
+        // $time = ($time == null) ? now()->toTimeString() : $time;
 
         return $date . " ". $time;
     }
 
+    private function checkDate($date)
+    {
+        try {
+            $explodedDate = explode("-", $date);
+            //code...
+        } catch (\Throwable $th) {
+            $date = now()->toDateString();
+            $explodedDate = [];
+        }
+        if (count($explodedDate) == 3) {
+            foreach ($explodedDate as $input) {
+                if (!is_numeric($input)) {
+                    $date = now()->toDateString();
+                    break;
+                }
+            }
+        } else {
+            $date = now()->toDateString();
+        }
+        return $date;
+    }
+
+    private function checkTime($time)
+    {
+        try {
+            $explodeTime = explode(":", $time);
+        } catch(\Throwable $th) {
+            $time = now()->toTimeString();
+            $explodeTime = []; 
+        }
+        if (count($explodeTime) == 3) {
+            foreach ($explodeTime as $input) {
+                if(!is_numeric($input)) {
+                $time = now()->toTimeString();
+                    break;
+                }
+            }
+        } else {
+            $time = now()->toTimeString();
+        }
+        return $time;
+    }
 }
