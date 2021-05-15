@@ -85,7 +85,7 @@ class BlogHelperTest extends TestCase
         $this->assertEquals(now(), $res);
         $date = "arg-12-14";
         $time = "arg:12";
-        // $res = $blogHelp->checkDateInput($date, $time);
+        $res = $blogHelp->checkDateInput($date, $time);
         $this->assertEquals(now(), $res);
     }
 }
