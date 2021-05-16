@@ -2,8 +2,6 @@
 
 namespace Rilr\Blog;
 
-use App\Models\Blog;
-use Mockery;
 use PHPUnit\Framework\TestCase;
 
 
