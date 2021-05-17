@@ -20,7 +20,7 @@
             </div>
             <div class="form-input">
                 <label>Skribent</label>
-                <input type="text" name="author" placeholder="Skribent...">
+                <input type="text" name="author" placeholder="Skribent..." required>
             </div>
             <div class="form-input">
                 <label>Tid det ska publiserat om tom publiseras det nu</label>
