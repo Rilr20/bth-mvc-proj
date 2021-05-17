@@ -41,7 +41,8 @@ class GraphicalDiceCreateObjectTest extends TestCase
 
         $res = $method->invokeArgs($yatzy, array());
 
-        for ($i = 0; $i < count($res); $i++) {
+        $count = count($res);
+        for ($i = 0; $i < $count; $i++) {
             $this->assertEquals($expArray[$i], $res[$i]);
         }
     }
@@ -86,7 +87,7 @@ class GraphicalDiceCreateObjectTest extends TestCase
     public function testDiceReturn()
     {
         $yatzy = new Yatzy();
-        $data = $yatzy->startYatzy();
+        $yatzy->startYatzy();
         $data = $yatzy->diceReturn();
 
         $this->assertEquals(5, count($data["playerDice"]));
@@ -95,7 +96,7 @@ class GraphicalDiceCreateObjectTest extends TestCase
     public function testReroll()
     {
         $yatzy = new Yatzy();
-        $data = $yatzy->startYatzy();
+        $yatzy->startYatzy();
         $chosenDice = [[1], [2,2], [3,3,3], [4,4,4,4], [5,5,5,5,5]];
 
         foreach ($chosenDice as $diceArray) {
@@ -131,7 +132,8 @@ class GraphicalDiceCreateObjectTest extends TestCase
         $yatzy->playerScore = $playerScore;
 
         $exp = [0, 2, 4, 5];
-        for ($i = 0; $i < count($exp); $i++) {
+        $count = count($exp);
+        for ($i = 0; $i < $count; $i++) {
             $res = $method->invokeArgs($yatzy, array());
             $this->assertEquals($exp[$i], $res);
             $yatzy->playerScore[$res] = 0;
@@ -150,7 +152,8 @@ class GraphicalDiceCreateObjectTest extends TestCase
         $dices = ["1", "1", "2", "5", "3"];
         $number = [1, 2, 3, 4, 5];
         $exp = [2, 2, 3, 0, 5];
-        for ($i = 0; $i < count($number); $i++) {
+        $count = count($number);
+        for ($i = 0; $i <$count; $i++) {
             $method->invokeArgs($yatzy, array($dices, $number[$i]));
             $this->assertEquals($exp[$i], $yatzy->playerScore[$i]);
         }

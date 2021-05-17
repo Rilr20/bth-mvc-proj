@@ -7,11 +7,8 @@ namespace Rilr\Dice;
 use DateTime;
 use Session;
 // use Illuminate\Support\Facades\Session;
-use Rilr\Dice\{
-    Dice,
-    DiceHand,
-    GraphicalDice
-};
+use Rilr\Dice\DiceHand;
+use Rilr\Dice\GraphicalDice;
 
 // use function Mos\Functions\{
 //     destroySession,
