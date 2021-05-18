@@ -161,7 +161,7 @@ class Yatzy
     }
     /**
      * adds the score to the current round
-     * @param int $diceScore of the score of current round
+     * @param array $diceScore of the score of current round
      * @return array calls render function which returns data array
      */
     public function addScore($diceScore)

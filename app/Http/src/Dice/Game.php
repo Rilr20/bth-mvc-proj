@@ -159,7 +159,7 @@ class Game
      * @param object $playerHand DiceHand object
      * @param int $currentSum sum of players points
      * @param int $opponentSum sum of opponents points
-     * @param string $computer html code of $computerDice
+     * @param string $computerDice html code of $computerDice
      * @return array returns a key value array
      */
     public function playerRoll($playerHand, $currentSum, $opponentSum, $computerDice)
