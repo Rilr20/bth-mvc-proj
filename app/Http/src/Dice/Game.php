@@ -24,9 +24,20 @@ use Rilr\Dice\GraphicalDice;
  */
 class Game
 {
+    /**
+     * @var object $player is a instance of DiceHand class
+     * @var object $computer is a instance of DiceHand class
+     * @var int $sides
+     */
     public $player;
     public $computer;
     public $sides = 6;
+
+    /**
+     * The function that starts the game. Calls the first round function
+     * @param int $numOfDie how many dice the player will have 
+     * @return array key value array is returned.
+     */
     public function playGame($numOfDie = 1)
     {
         // $_SESSION["running"] = "true";
@@ -66,6 +77,11 @@ class Game
         // sendResponse($body);
     }
 
+    /**
+     * calculates the sum inside the dice array
+     * @param array $diceArray array of intergers
+     * @return int calculated sum of the numbers in the $diceArray
+     */
     private function dieSum($diceArray): int
     {
         //ska ha föregående kast resultat
@@ -75,6 +91,11 @@ class Game
         }
         return $dieSum;
     }
+    /**
+     * returns an array of html code based on the inputed dice array
+     * @param array $diceArray array of intergers
+     * @return array returns array of html code
+     */
     private function renderDice($diceArray): array
     {
         $htmlArray = [];
@@ -85,6 +106,12 @@ class Game
         }
         return $htmlArray;
     }
+    /**
+     * the first round of the game, player and computer rolls the die
+     * @param object $playerHand DiceHand object
+     * @param object $computerHand DiceHand object
+     * @return array returns a key value array
+     */
     private function firstRound($playerHand, $computerHand): array
     {
         $playerDice = [];
@@ -109,7 +136,10 @@ class Game
 
         return $data;
     }
-
+    /**
+     * initiates the game returns a basic key value array for output
+     * @return array returns a key value array
+     */
     public function initGame(): array
     {
         // $_SESSION["running"] = "false";
@@ -124,7 +154,14 @@ class Game
         // $body = renderView("layout/dice.php", $data);
         // sendResponse($body);
     }
-
+    /**
+     * player rolls the dice
+     * @param object $playerHand DiceHand object
+     * @param int $currentSum sum of players points
+     * @param int $opponentSum sum of opponents points
+     * @param string $computer html code of $computerDice
+     * @return array returns a key value array
+     */
     public function playerRoll($playerHand, $currentSum, $opponentSum, $computerDice)
     {
         //rendera tärningar
@@ -151,7 +188,13 @@ class Game
         // sendResponse($body);
         return $data;
     }
-
+    /**
+     * Checks the win condition based on the player and computer sum
+     * @param int $playerSum sum of players points
+     * @param int $computerSum sum of opponents points
+     * @param array $htmlArray html code for opponents dice
+     * @return array returns a key value array
+     */
     public function checkWinCondition($playerSum, $computerSum, $htmlArray)
     {
         $string = "";
@@ -202,7 +245,13 @@ class Game
         // sendResponse($body);
         return $data;
     }
-
+    /**
+     * Computer rolls the dice then calls checkWinCondition
+     * @param object $computerHand instance of DiceHand class
+     * @param int $computerSum sum of opponents points 
+     * @param int $playerSum sum of players points 
+     * @return array key Value array
+     */
     public function computerRoll($computerHand, $computerSum, $playerSum)
     {
         //rendera tärningar

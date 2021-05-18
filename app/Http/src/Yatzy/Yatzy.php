@@ -16,7 +16,17 @@ use Rilr\Dice\{
  */
 class Yatzy
 {
-
+    /**
+     * @var object $player instance of DiceHand
+     * @var array $playerScore scoretable for player
+     * @var object $computer instance of DiceHand
+     * @var array $computerScore scoretable for computer
+     * @var array $recentDice the most recent throws
+     * @var int DICEAMOUNT Amount of die in yatzy
+     * @var int DICESIDES The amount of sides that has in yatzy
+     * @var array TABLEDATA Rounds names in yatzy
+     * @var array BORDER Adds a html class on these
+     */
     public $player;
     public $playerScore;
     public $computer;
@@ -26,6 +36,13 @@ class Yatzy
     const DICESIDES = 6;
     const TABLEDATA = ["Ones", "Twos", "Threes", "Fours", "Fives", "Sixes", "Sum", "Bonus", "Three of a kind", "Four of a kind", "Full House", "Small Straight", "Large Straight", "Chance", "Yatzy", "Total Score"];
     const BORDER = ["Sum", "Three of a kind", "Total Score"];
+
+    /**
+     * Creates a table with computer and players score
+     * @param array $playerScore with ints that are players score 
+     * @param array  $computerScore with ints that are computers score
+     * @return array returns a key value array with the new table it creates
+     */
     public function render($playerScore, $computerScore): array
     {
         $loopdata = "";
@@ -52,7 +69,10 @@ class Yatzy
         $data["tabledata"] = $loopdata;
         return $data;
     }
-
+    /**
+     * Starts the game and creates dicehands for player and computer
+     * @return array $data key value array
+     */
     public function startYatzy(): array
     {
         $this->player = new DiceHand(self::DICEAMOUNT, self::DICESIDES);
@@ -67,7 +87,9 @@ class Yatzy
         Session::put("throws", 0);
         return $data;
     }
-
+    /**
+     * creates array for player
+     */
     private function playerArray(): array
     {
         $playerScore = [];
@@ -83,7 +105,10 @@ class Yatzy
         // array_push($playerScore, 0);
         return $playerScore;
     }
-
+    /**
+     * throws dice and adds it to diceArray
+     * @return array $data key value array
+     */
     public function diceReturn()
     {
         $this->player->throw();
@@ -106,7 +131,11 @@ class Yatzy
         $data["playerDice"] = $diceArray;
         return $data;
     }
-
+    /**
+     * function that rerolls the chosen die
+     * @param array $chosendie array with the die you want to keep
+     * @return array $data key value array
+     */
     public function reroll($chosendie)
     {
         Session::put("recentDice", $this->recentDice);
@@ -130,7 +159,11 @@ class Yatzy
         $data["playerDice"] = $dices;
         return $data;
     }
-
+    /**
+     * adds the score to the current round
+     * @param int $diceScore of the score of current round
+     * @return array calls render function which returns data array
+     */
     public function addScore($diceScore)
     {
         // echo "function";
@@ -180,6 +213,10 @@ class Yatzy
         // var_dump($next);
     }
 
+    /**
+     * finds out what the next round is
+     * @return int for the next round
+     */
     private function getNextScore()
     {
         $i = 0;
@@ -191,7 +228,12 @@ class Yatzy
         }
         return $i;
     }
-
+    /**
+     * adds the sum of dices to the right round in $playerScore
+     * @param array $dices array of dice numbers
+     * @param int $number roundnumber
+     * @return void
+     */
     private function simpleAdds($dices, $number)
     {
         $sum = 0;
@@ -203,13 +245,21 @@ class Yatzy
         // return $sum;
         $this->playerScore[$number - 1] = $sum;
     }
-
+    /**
+     * If score is 63 or more player gains bonus score
+     * @param int $sum sum of all scores
+     * @return void
+     */
     private function bonusScore($sum)
     {
         if ($sum >= 63) {
             $this->playerScore[7] = 50;
         }
     }
+    /**
+     * calculates the sum on players scorecard
+     * @return void
+     */
     private function calculateSum()
     {
         $scoreTable = $this->playerScore;

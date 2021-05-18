@@ -16,7 +16,7 @@ class Dice
     public int $sides;
     private int $latestThrow = 0;
     /**
-     * $sides get function
+     * @param int $sides get function
      */
     public function __construct($sides)
     {
@@ -24,12 +24,12 @@ class Dice
     }
     /**
      * Gets a random number depending on dice sides
-     * @return int the amoun the dice random was
+     * @return void
      */
-    public function throw(): int
+    public function throw(): void
     {
         $this->latestThrow = rand(1, $this->sides);
-        return $this->latestThrow;
+        // return $this->latestThrow;
     }
     /**
      * @return int returns the last thrown value of the dice

@@ -8,6 +8,10 @@ use Rilr\Dice\Dice;
 
 class GraphicalDice extends Dice
 {
+    /**
+     * @var int $diceResult which is used to return html string
+     * @return string html string where the span element is added depending on $diceresult value
+     */
     public function renderDice($diceResult): string
     {
         $span = "<span class='dot'></span>";
