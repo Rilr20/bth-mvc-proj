@@ -25,8 +25,8 @@ use Rilr\Dice\GraphicalDice;
 class Game
 {
     /**
-     * @var object $player is a instance of DiceHand class
-     * @var object $computer is a instance of DiceHand class
+     * @var DiceHand $player is a instance of DiceHand class
+     * @var DiceHand $computer is a instance of DiceHand class
      * @var int $sides
      */
     public $player;
@@ -108,8 +108,8 @@ class Game
     }
     /**
      * the first round of the game, player and computer rolls the die
-     * @param object $playerHand DiceHand object
-     * @param object $computerHand DiceHand object
+     * @param DiceHand $playerHand DiceHand object
+     * @param DiceHand $computerHand DiceHand object
      * @return array returns a key value array
      */
     private function firstRound($playerHand, $computerHand): array
@@ -156,7 +156,7 @@ class Game
     }
     /**
      * player rolls the dice
-     * @param object $playerHand DiceHand object
+     * @param DiceHand $playerHand DiceHand object
      * @param int $currentSum sum of players points
      * @param int $opponentSum sum of opponents points
      * @param string $computerDice html code of $computerDice
@@ -247,7 +247,7 @@ class Game
     }
     /**
      * Computer rolls the dice then calls checkWinCondition
-     * @param object $computerHand instance of DiceHand class
+     * @param DiceHand $computerHand instance of DiceHand class
      * @param int $computerSum sum of opponents points 
      * @param int $playerSum sum of players points 
      * @return array key Value array

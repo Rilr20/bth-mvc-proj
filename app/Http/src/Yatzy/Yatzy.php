@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Rilr\Yatzy;
 
-use phpDocumentor\Reflection\PseudoTypes\True_;
 use Session;
 use Rilr\Dice\{
     DiceHand,
@@ -133,7 +132,7 @@ class Yatzy
     }
     /**
      * function that rerolls the chosen die
-     * @param array $chosendie array with the die you want to keep
+     * @param interger[] $chosendie array with the die you want to keep
      * @return array $data key value array
      */
     public function reroll($chosendie)
@@ -161,7 +160,7 @@ class Yatzy
     }
     /**
      * adds the score to the current round
-     * @param array $diceScore of the score of current round
+     * @param interger[] $diceScore of the score of current round
      * @return array calls render function which returns data array
      */
     public function addScore($diceScore)
