@@ -82,7 +82,7 @@ class BlogHelp
         if (count($explodeTime) == 3) {
             foreach ($explodeTime as $input) {
                 if(!is_numeric($input)) {
-                $time = now()->toTimeString();
+                    $time = now()->toTimeString();
                     break;
                 }
             }
