@@ -76,9 +76,14 @@ class BlogController extends Controller
     {
         //här är parameter route
         $blogHelp = new BlogHelp();
-        $blog = Blog::where('id','=', $id)->firstorfail();
+        $blog = Blog::where('id','=', $id)->where('deleted_at', "=", null)->first();
+        
         // $blog = Blog::where('id', $id)->get();
-        $type = $blogHelp->blogtype($blog);
+        if ($blog != null) {
+            $type = $blogHelp->blogtype($blog);
+        } else {
+            $type = "none";
+        }
         return view('blog.' . $type, [
             "blog" => $blog
         ]);
