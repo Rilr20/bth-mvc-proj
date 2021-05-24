@@ -159,3 +159,22 @@
 .edit {
     background: #604eaf;
 }
+
+.red {
+    padding-top: 0.5em;
+    color: rgb(255, 70, 70);
+}
+
+.label {
+    text-align: center;
+    padding: {
+        top: 0.5em;
+        bottom: 0.5em;
+    };
+}
+
+.textarea {
+    width: 100%;
+    resize: vertical;
+    
+}
