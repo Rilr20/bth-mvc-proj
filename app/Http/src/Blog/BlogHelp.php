@@ -59,6 +59,8 @@ class BlogHelp
      */
     public function checkDateInput($date, $time)
     {
+        // dd($time);
+        // dd($date);
         $date = $this->checkdate($date);
         $time = $this->checkTime($time);
         // $date = ($date == null) ? now()->toDateString() : $date;
@@ -103,7 +105,7 @@ class BlogHelp
             $time = now()->toTimeString();
             $explodeTime = []; 
         }
-        if (count($explodeTime) == 3) {
+        if (count($explodeTime) >= 2 && count($explodeTime) <= 3) {
             foreach ($explodeTime as $input) {
                 if(!is_numeric($input)) {
                     $time = now()->toTimeString();
