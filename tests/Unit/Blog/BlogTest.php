@@ -58,8 +58,8 @@ class BlogHelperTest extends TestCase
     {
         $blogHelp = new BlogHelp();
         $date = "2021-01-01";
-        $time = "14:52:06";
-        $exp = ["2021-01-01 14:52:06", now()->toDateString() . " " . "14:52:06", now()];
+        $time = "14:52";
+        $exp = ["2021-01-01 14:52", now()->toDateString() . " " . "14:52", now()];
 
         $res = $blogHelp->checkDateInput($date, $time);
         $this->assertEquals($exp[0], $res);
