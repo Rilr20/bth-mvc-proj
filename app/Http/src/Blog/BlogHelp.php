@@ -105,7 +105,8 @@ class BlogHelp
             $time = now()->toTimeString();
             $explodeTime = []; 
         }
-        if (count($explodeTime) >= 2 && count($explodeTime) <= 3) {
+        $count = count($explodeTime);
+        if ($count == 2 || $count == 3) {
             foreach ($explodeTime as $input) {
                 if(!is_numeric($input)) {
                     $time = now()->toTimeString();
