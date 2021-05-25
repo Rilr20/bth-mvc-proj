@@ -76,7 +76,7 @@ class BlogController extends Controller
     {
         //här är parameter route
         $blogHelp = new BlogHelp();
-        $blog = Blog::where('id','=', $id)->where('deleted_at', "=", null)->first();
+        $blog = Blog::where('id','=', $id)->where('deleted_at', "=", null)->where('published', '<=', Carbon::now('Europe/Stockholm'))->first();
         
         // $blog = Blog::where('id', $id)->get();
         if ($blog != null) {
