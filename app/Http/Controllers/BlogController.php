@@ -100,7 +100,7 @@ class BlogController extends Controller
         //
         // dd("ok");
         // $blog = Blog::where('id', '=', $id)->firstorfail();
-        $blog = Blog::find($id)->first();
+        $blog = Blog::find($id);
         return view('blog.update')->with('blog', $blog);
     }
 
