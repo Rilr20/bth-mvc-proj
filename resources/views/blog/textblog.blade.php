@@ -11,7 +11,10 @@
                     {{$blog->bodytext}}
                 </p>
             </div>
-            <p class="preview-footer">{{$blog->published}}</p>
+            <div class="blog-footer">
+                <p class="blog-footer-text">publiserat: {{$blog->published}}</p>
+                <p class="blog-footer-text">av: {{$blog->author}}</p>
+            </div>
         </div>
     </div>
 @endsection
