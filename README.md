@@ -22,7 +22,7 @@ You can choose 1 or 2 dice. Then you can roll the die to get up to but not over 
 ## Yatzy
 Play the first part of Yatzy. You have 3 throws per round, after each throw you can choose to keep some die or add it to the points table. You can submit your score to the highscore table. 
 
-## Die
+## Dice
 
 There are 3 different dice classes, Dice, DiceHand, and GraphicalDice. Dice is just a simple when creating you can set how many sides it can have. DiceHand is for when you need multiple die. You set how many you want and how many sides you want. Graphical die draws a 6 sides die with css based on the result the die got.
 
